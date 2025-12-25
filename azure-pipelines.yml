@@ -10,6 +10,7 @@ stages:
         displayName: Terraform Init and Validate Job
         steps:
          - task: TerraformTask@5
+           displayName: Init and Validate Task
            inputs:
              provider: 'azurerm'
              command: 'init'
