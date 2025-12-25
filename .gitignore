@@ -1,0 +1,27 @@
+# Local .terraform directories
+.terraform/
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+# The terraform.tfstate.lock.info file is created and deleted automatically 
+# and does not need to be committed.
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Ignore override files, as they are usually used for local development and
+# should not be shared in the main repository.
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+# If you want to commit plan files, remove this pattern.
+*tfplan*
+
+# Ignore CLI configuration files.
+.terraformrc
+terraform.rc

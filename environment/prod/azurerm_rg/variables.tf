@@ -1,0 +1,6 @@
+variable "azurerm" {
+    type = map(object({
+      name = string
+      location = string
+    }))
+}
