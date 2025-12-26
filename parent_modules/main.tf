@@ -3,3 +3,9 @@ module "rgs" {
     azurerm = var.azurerm
   
 }
+
+module "vnet" {
+    source = "../environment/prod/azurerm_vnet"
+    vnet = var.vnet
+    depends_on = [ module.rgs ]
+}
