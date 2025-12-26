@@ -36,6 +36,7 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'init'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/parent_modules'
               backendServiceArm: 'rumuitserviceconnection'
               backendAzureRmStorageAccountName: 'test42022'
               backendAzureRmContainerName: 'bawla-container'
