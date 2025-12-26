@@ -3,27 +3,27 @@ trigger: none
 pool: Latest-Pool
 
 stages:
-  - stage: FirstStage
-    displayName: Terraform Init and Validate
-    jobs:
-      - job: FirstJob
-        displayName: Terraform Init and Validate Job
-        steps:
-         - task: TerraformTask@5
-           displayName: Init and Validate Task
-           inputs:
-             provider: 'azurerm'
-             command: 'init'
-             workingDirectory: '$(System.DefaultWorkingDirectory)/parent_modules'
-             backendServiceArm: 'rumuitserviceconnection'
-             backendAzureRmStorageAccountName: 'test42022'
-             backendAzureRmContainerName: 'bawla-container'
-             backendAzureRmKey: 'terraform.tfstate'
+#   - stage: FirstStage
+#     displayName: Terraform Init and Validate
+#     jobs:
+#       - job: FirstJob
+#         displayName: Terraform Init and Validate Job
+#         steps:
+#          - task: TerraformTask@5
+#            displayName: Init and Validate Task
+#            inputs:
+#              provider: 'azurerm'
+#              command: 'init'
+#              workingDirectory: '$(System.DefaultWorkingDirectory)/parent_modules'
+#              backendServiceArm: 'rumuitserviceconnection'
+#              backendAzureRmStorageAccountName: 'test42022'
+#              backendAzureRmContainerName: 'bawla-container'
+#              backendAzureRmKey: 'terraform.tfstate'
 
-         - task: TerraformTask@5
-           inputs:
-             provider: 'azurerm'
-             command: 'validate'
+#          - task: TerraformTask@5
+#            inputs:
+#              provider: 'azurerm'
+#              command: 'validate'
           
 
   - stage: SecondStage
